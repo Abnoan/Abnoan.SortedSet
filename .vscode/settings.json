@@ -1,0 +1,6 @@
+{
+  "files.exclude": {
+    "Abnoan.SortedSet/bin": true,
+    "Abnoan.SortedSet/obj": true
+  }
+}
