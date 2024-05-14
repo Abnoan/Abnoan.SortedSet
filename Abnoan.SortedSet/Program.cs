@@ -86,7 +86,7 @@ internal class Program
         #endregion
 
         #region Exercicio
-        
+
         #region Ex1
         GestorDeTarefas gestor = new GestorDeTarefas();
         gestor.AdicionarTarefa("Finalizar relatório", 2);
@@ -96,6 +96,7 @@ internal class Program
         #endregion
 
         #region Ex2
+        
         // Criação do primeiro catálogo de produtos
         CatalogoDeProdutos catalogo1 = new CatalogoDeProdutos();
         catalogo1.AdicionarProduto("Notebook", "Eletrônicos", 1200.00m);
@@ -115,6 +116,16 @@ internal class Program
         catalogo1.IntersectCatalogo(catalogo2.produtos);
 
         Console.WriteLine("Produtos após a intersecção:");
+        catalogo1.MostrarProdutos();
+
+        // Realiza a união do catalogo1 com os produtos do catalogo2
+        catalogo1.UnionCatalogo(catalogo2.produtos);
+        Console.WriteLine("Produtos após a união:");
+        catalogo1.MostrarProdutos();
+
+        // Realiza a exclusão dos produtos de catalogo2 de catalogo1
+        catalogo1.ExceptCatalogo(catalogo2.produtos);
+        Console.WriteLine("Produtos após a exclusão dos itens de catalogo2:");
         catalogo1.MostrarProdutos();
 
         #endregion
